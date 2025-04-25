@@ -10,4 +10,4 @@ Premiers exercices de Javascript
 
 ## 🖼️ Aperçu visuel (optionnel)
 
-[Live Demo](https://ocrzia.github.io/JS3--Pair-impair/)
+[Live Demo](https://ocrzia.github.io/JS4-Random-number/)
