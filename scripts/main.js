@@ -10,8 +10,8 @@ const tentativesElement = document.querySelector('.tentatives');
 // ==============================
 // 🚀 Déclaration des variables
 // ==============================
-
-const randomNumber = Math.floor(Math.random()* 100)  + 1; 
+// On initialise le nombre aléatoire entre 1 et 100
+let randomNumber = Math.floor(Math.random()* 100)  + 1; 
 let tentatives = 10;
 let timeoutId;
 
@@ -26,7 +26,6 @@ function removeMsg() {
     result.textContent = "";
   }, 3000);
 }
-
 // ==============================
 // 🧲 Événements
 // ==============================
@@ -39,7 +38,7 @@ checkBt.addEventListener('click', function(e) {
     tentativesElement.textContent += myNumber.value + ", ";
     // 🔒 Compare le nombre utilisateur au nombre random
     if (myNumber.value == randomNumber) {
-      result.textContent = "Félicitations vous avez trouvé !"
+      result.textContent = "Félicitations vous avez trouvé !";
       
     } else if (myNumber.value < randomNumber) {
       result.textContent = "Le nombre est plus grand";
@@ -48,6 +47,7 @@ checkBt.addEventListener('click', function(e) {
       result.textContent = "Le nombre est plus petit";
       tentatives--;
     }
+    
     removeMsg();
     // 🔒 Vérifie si c'est perdu
     if (tentatives <= 0) {
